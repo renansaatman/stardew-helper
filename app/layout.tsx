@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${inter.className} ${ptSansCaption.className} flex justify-center items-center mt-10 bg-[#FCF6D9]`}>
+      <body className={`${inter.className} ${ptSansCaption.className} flex justify-center items-center mt-10 bg-beige-100`}>
         <Header />
         <main>
           {children}
