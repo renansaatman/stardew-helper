@@ -2,49 +2,80 @@ import type {Config} from 'tailwindcss'
 
 export default {
     content: [
-    './src/components/**/*.{js,jsx,ts,tsx,mdx}',
-    './app/**/*.{js,jsx,ts,tsx,mdx}',
+      './app/**/*.{js,jsx,ts,tsx}',
+      './src/components/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
-  	container: {
+    container: {
       center: true,
-      padding: '2rem',
+      padding: "var(--container-padding)",
       screens: {
-        '2xl': '1200px',
+        "2xl": "var(--container-2xl)",
       },
     },
     extend: {
       colors: {
-        white: '#FFFFFF',
+        white: "var(--color-white)",
         blue: {
-          100: '#5F9598',
-          200: '#1D546D',
-          300: '#061E29',
+          100: "var(--color-blue-100)",
+          200: "var(--color-blue-200)",
+          300: "var(--color-blue-300)",
         },
         gray: {
-          100: '#F3F4F4',
+          100: "var(--color-gray-100)",
         },
+        beige: {
+          100: "var(--color-beige-100)",
+          200: "var(--color-beige-200)",
+        },
+        orange: "var(--color-orange)",
       },
       borderRadius: {
-        lg: '0.5rem',
-        md: 'calc(0.5rem - 2px)',
-        sm: 'calc(0.5rem - 4px)',
+        lg: "var(--radius-lg)",
+        md: "var(--radius-md)",
+        sm: "var(--radius-sm)",
       },
       fontFamily: {
-        sans: ['PT Sans Caption', 'sans-serif'],
-        inter: ['Inter', 'sans-serif'],
+        sans: ["var(--font-sans)"],
+        inter: ["var(--font-inter)"],
       },
       fontSize: {
-        'heading-hg': ['40px', { lineHeight: '120%', fontWeight: '700' }],
-        'heading-xl': ['32px', { lineHeight: '120%', fontWeight: '700' }],
-        'heading-lg': ['28px', { lineHeight: '120%', fontWeight: '700' }],
-        'heading-md': ['24px', { lineHeight: '120%', fontWeight: '700' }],
-        'heading-sm': ['20px', { lineHeight: '120%', fontWeight: '700' }],
-        'heading-xs': ['16px', { lineHeight: '120%', fontWeight: '700' }],
-
-        'body-md': ['16px', { lineHeight: '150%', fontWeight: '400' }],
-        'body-sm': ['14px', { lineHeight: '150%', fontWeight: '400' }],
-        'body-xs': ['12px', { lineHeight: '150%', fontWeight: '400' }],
+        "heading-hg": [
+          "var(--text-heading-hg)",
+          { lineHeight: "var(--leading-heading)", fontWeight: "700" },
+        ],
+        "heading-xl": [
+          "var(--text-heading-xl)",
+          { lineHeight: "var(--leading-heading)", fontWeight: "700" },
+        ],
+        "heading-lg": [
+          "var(--text-heading-lg)",
+          { lineHeight: "var(--leading-heading)", fontWeight: "700" },
+        ],
+        "heading-md": [
+          "var(--text-heading-md)",
+          { lineHeight: "var(--leading-heading)", fontWeight: "700" },
+        ],
+        "heading-sm": [
+          "var(--text-heading-sm)",
+          { lineHeight: "var(--leading-heading)", fontWeight: "700" },
+        ],
+        "heading-xs": [
+          "var(--text-heading-xs)",
+          { lineHeight: "var(--leading-heading)", fontWeight: "700" },
+        ],
+        "body-md": [
+          "var(--text-body-md)",
+          { lineHeight: "var(--leading-body)", fontWeight: "400" },
+        ],
+        "body-sm": [
+          "var(--text-body-sm)",
+          { lineHeight: "var(--leading-body)", fontWeight: "400" },
+        ],
+        "body-xs": [
+          "var(--text-body-xs)",
+          { lineHeight: "var(--leading-body)", fontWeight: "400" },
+        ],
       },
     },
   },

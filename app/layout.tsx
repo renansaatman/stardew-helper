@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/src/components/header";
-import { Inter } from "next/font/google";
+import { Inter, PT_Sans_Caption } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Stardew Valley Bundles",
@@ -14,14 +14,20 @@ const inter = Inter({
   variable: '--font-inter'
 })
 
+const ptSansCaption = PT_Sans_Caption({
+  subsets: ['latin'],
+  weight: '700',
+  variable: '--font-sans'
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className}`}>
+    <html lang="pt-BR">
+      <body className={`${inter.className} ${ptSansCaption.className} flex justify-center items-center mt-10 bg-[#FCF6D9]`}>
         <Header />
         <main>
           {children}
