@@ -27,9 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${inter.className} ${ptSansCaption.className} flex justify-center items-center mt-10 bg-beige-100`}>
+      <body className={`${inter.className} ${ptSansCaption.className} flex flex-col justify-center items-center mt-10 bg-beige-100`}>
         <Header />
-        <main>
+        <main className="max-w-120 w-full lg:max-w-4xl">
           {children}
         </main>
       </body>
